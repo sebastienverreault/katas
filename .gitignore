@@ -1,0 +1,7 @@
+# Typescript
+.build
+node_modules
+
+# Replit
+.replit
+replit.nix
