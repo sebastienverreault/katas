@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "build": "esbuild index.ts --bundle --log-level=warning --outdir=./.build --outbase=. --sourcemap=inline --target=node16 --platform=node --format=cjs",
+    "execute": "yarn --silent build && node --enable-source-maps .build/index.js",
+    "fast-execute": "node --enable-source-maps .build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
