@@ -1,5 +1,9 @@
 load "shared"
 
+setup_file() {
+  build
+}
+
 @test "roman-numerals: I" {
   run main I
   [ "${lines[0]}" = "1" ]

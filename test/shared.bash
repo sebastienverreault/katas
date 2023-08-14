@@ -1,6 +1,8 @@
-main() {
+build() {
   esbuild index.ts --bundle --log-level=warning --outdir=./.build --outbase=. --sourcemap=inline --target=node16 --platform=node --format=cjs
+}
 
+main() {
   node --enable-source-maps .build/index.js $1
 }
 

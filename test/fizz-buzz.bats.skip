@@ -1,5 +1,9 @@
 load "shared"
 
+setup_file() {
+  build
+}
+
 @test "fizzbuzz: when n is 5" {
   run main 5
   [ "${lines[0]}" = "1" ]
