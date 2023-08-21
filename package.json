@@ -7,7 +7,8 @@
     "build": "esbuild index.ts --bundle --log-level=warning --outdir=./.build --outbase=. --sourcemap=inline --target=node16 --platform=node --format=cjs",
     "execute": "yarn --silent build && node --enable-source-maps .build/index.js",
     "fast-execute": "node --enable-source-maps .build/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "watch": "jest --watch"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,9 @@
     "node-fetch": "^3.3.1"
   },
   "devDependencies": {
-    "@types/node": "^20.4.1"
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.4.1",
+    "jest": "^29.6.3",
+    "ts-jest": "^29.1.1"
   }
 }
